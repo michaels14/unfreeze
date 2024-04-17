@@ -1,0 +1,224 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body, input{
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+body{
+    padding: 6.0rem;
+
+    height: 100vh;
+
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+
+
+}
+
+#app{
+    max-width: 116rem;
+
+    margin: 0 auto;
+}
+
+
+.login{
+    margin: 0 auto;
+    padding: 4rem 5rem;
+
+    text-align: center;
+
+    width: 50rem;
+
+    background-color: #000;
+
+    border-radius: 2.3rem;
+}
+
+form{
+    margin-top: 6rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.input-wrapper{
+    color: rgb(46, 199, 214) ;
+    
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+
+    height: 2.8rem;
+}
+
+.input-wrapper label{
+    width: 4.6rem;
+}
+
+.input-wrapper input{
+    border: none;
+    border-radius: 1.5rem;
+
+    background-color: rgb(46, 199, 214);
+
+    padding: .6rem;
+}
+
+.input-wrapper input:focus{
+    outline: none;
+    background-color: rgba(46, 199, 214,0.8);
+}
+
+.input-wrapper #user{
+    width: 27rem;
+    
+}
+
+.input-wrapper #password{
+    width: 21rem;
+}
+
+.password-eye{
+    height: 2.8rem;
+    width: 4.6rem;
+
+    overflow: hidden;
+    
+    display: flex;
+
+    position: relative;
+}
+
+#encrypted{
+    height: 100%;
+    width:100%; 
+    position: absolute;
+    z-index: 1;
+
+    cursor: pointer;
+}
+
+#decrypted{
+    height: 100%;
+    width:100%;
+
+    position: absolute;
+    z-index: -1;
+
+    cursor: pointer;
+
+    filter: brightness(0) saturate(100%) invert(77%) sepia(72%) saturate(1315%) hue-rotate(143deg) brightness(90%) contrast(85%);
+
+}
+
+/* #encrypted:active{
+    position: absolute;
+
+    animation: teste;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes teste {
+    0%{
+
+    }
+
+    100%{
+        opacity: 0;
+    }
+} */
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.buttons input{
+    background-color: #000;
+
+    border: none;
+}
+
+.button-to-enter input{
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #fff;
+
+    cursor: pointer;
+
+}
+
+.button-to-enter input:hover{
+    text-decoration: underline;
+}
+
+.button-sign-in input{
+    font-weight: 400;
+    color: rgb(46, 199, 214) ;
+
+    cursor: pointer;
+}
+
+.button-sign-in input:hover{
+    text-decoration: underline;
+}
+
+.auxiliary-links{
+    position: fixed;
+    bottom: 6%;
+    right: 6%;
+
+    display: flex;
+    gap: 1rem;
+}
+
+.auxiliary-links a{
+    text-decoration: none;
+}
+
+
+/*ANIMATIONS*/
+.login > img:hover{
+    animation: increase-infinite 1s forwards infinite;
+}
+
+.auxiliary-links img:hover{
+    animation: increase .5s forwards;
+}
+
+@keyframes increase-infinite {
+    0%{
+
+    }
+
+    50%{
+        transform: scale(1.1);
+    }
+}
+
+@keyframes increase {
+    0%{
+
+    }
+
+    100%{
+        transform: scale(1.1);
+    }
+}
